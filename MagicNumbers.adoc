@@ -1,0 +1,72 @@
+:icons: font
+= Simple coding task - a file differentiator
+
+There are various people and not everyone is honest. Some would pretend a file is a JPG, while in fact, it's a dangerous, malicious binary. 
+Write a program, that prevents that from happening!
+
+1. You accept all extensions. No matter the extension, attempt at reading will be done.
+2. You verify "magic numbers". 
+3. Program must say if the extension is true (a txt file is a text file, an JPG is a JPG).
+4. If extension isn't handled, program honestly states so (throwing an appropriate exception, one that fits this situation).
+5. We expect JPG, GIF and TXT to be handled. Anything more is a plus.
+6. If extension lies, program states: Extension is A, while actually it's a B.
+
+Anything that is NOT stated in the above list, is not necessary. Console-only program is absolutely fine, no GUI is necessary. 
+
+TIP: see Steps, at the bottom of the page for how to proceed.
+
+== Magic numbers?!
+
+If you never heard of magic numbers, don't worry. They are good resources to study:
+
+1. Unix `file` command, which tells you what a file is.
+2. https://en.wikipedia.org/wiki/List_of_file_signatures
+3. https://en.wikipedia.org/wiki/File_format=Magic_number
+4. https://en.wikipedia.org/wiki/Magic_number_(programming)=Magic_numbers_in_files
+
+== Prerequisites
+
+. *JDK11+*.
+. *Maven 3.6 +*.
+. A sheet of paper and a pen.
+
+== Steps
+
+Work on branches!
+
+TIP: use mantra!
+
+. read the specification requirements, both functional and non-functional
+. conceptualize: write down nouns and verbs from the specification introduction
+. draw a flow chart for a simple version of the program
+
+== JShell
+
+Identify key problems, play with API, do few experiments for solving crucial parts.
+.. save the results, add, commit, push
+
+== Impera
+
+2nd branch. Rework the JShell file into a Java file, with proper class and main method. Use just `java` to launch it, code imperatively for now.
+
+TIP: so far you have been increasing your familiarity with the problem. It's time to do more. For instance: let's introduce OOP.
+
+== Branch OOP 
+
+. if you haven't so far - use mantra and have a full-blown project with `pom.xml`, Maven, etc.
+. draw CRC diagrams or class diagrams from UML. 
+. try finding out how your objects will work. Do you need more than 1 package?
+. name your main package appropriately
+. remember about encapsulation and polymorphism and composition!
+
+== Branch TDD
+
+. add TestNG to your POM - on test scope of course
+. create a `TODO.lst` file and have their the list of your test scenarios
+. scenario by scenario do the TDD mantra: red-green-refactor
+. 80% coverage please
+
+== Branch FP
+
+. introduce functional API: streams and lambdas
+. perhaps write a version of the app where you do everything in one line (stream!)
