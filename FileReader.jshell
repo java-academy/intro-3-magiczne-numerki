@@ -1,0 +1,23 @@
+System.out.println("Scanner: ");
+Scanner sc = new Scanner(new File("./text.txt"));
+while (sc.hasNextLine()) {
+  System.out.println(sc.nextLine()); 
+}
+
+System.out.println("\nFile Reader: ");
+FileReader fr = new FileReader("./text.txt"); 
+int i; 
+while ((i=fr.read()) != -1) {
+  System.out.print((char) i); 
+}
+
+System.out.println("\nBufferedReader: ")
+BufferedReader br = new BufferedReader(new FileReader(new File("./text.txt"))); 
+String st; 
+while ((st = br.readLine()) != null) {
+  System.out.println(st); 
+}
+
+System.out.println("\nFiles: ");
+String file = Files.readString(Path.of("./text.txt"));
+System.out.println(file);
